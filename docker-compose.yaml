@@ -1,0 +1,44 @@
+version: "3.3"
+
+networks:
+  loki:
+    driver: bridge
+  
+services:
+  myapi:
+    image: "myapi:latest"
+    networks:
+      - loki
+    ports:
+      - "1323:1323"
+    volumes:
+      - "./logs/api:/log"
+
+  loki:
+    image: grafana/loki:2.0.0
+    ports:
+      - "3100:3100"
+    command:
+      - -config.file=/etc/loki/local-config.yaml
+      - -print-config-stderr=true
+    networks:
+      - loki
+
+  promtail:
+    image: grafana/promtail:2.0.0
+    command: -config.file=/etc/promtail/config.yaml
+    volumes:
+      - "./logs/api:/logs/api"
+      - "./promtail/config.yaml:/etc/promtail/config.yaml"
+      - "./tmp:/tmp"
+    networks:
+      - loki
+    ports:
+      - "9080:9080"
+
+  grafana:
+    image: grafana/grafana:latest
+    ports: 
+      - "3000:3000"
+    networks:
+      - loki

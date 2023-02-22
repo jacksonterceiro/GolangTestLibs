@@ -1,0 +1,12 @@
+{"level":"info","msg":"Starting api...","time":"2023-02-17T01:47:09Z"}
+{"level":"info","msg":"Call GetUser Method 2...","time":"2023-02-17T01:49:12Z"}
+{"level":"info","msg":"Starting api...","time":"2023-02-17T12:12:17Z"}
+{"level":"info","msg":"Starting api...","time":"2023-02-17T12:17:11Z"}
+{"level":"info","msg":"Starting api...","time":"2023-02-17T12:21:30Z"}
+{"level":"info","msg":"logging in level info...","time":"2023-02-17T12:21:33Z"}
+{"level":"info","msg":"logging in level info...","time":"2023-02-17T12:25:04Z"}
+{"level":"error","msg":"logging in level error...","time":"2023-02-17T12:26:14Z"}
+{"level":"warning","msg":"logging in level warn...","time":"2023-02-17T12:26:28Z"}
+{"level":"info","msg":"Starting api...","time":"2023-02-17T12:28:04Z"}
+{"level":"warning","msg":"logging in level warn...","time":"2023-02-17T12:28:13Z"}
+{"level":"info","msg":"logging in level info...","time":"2023-02-17T12:28:17Z"}
